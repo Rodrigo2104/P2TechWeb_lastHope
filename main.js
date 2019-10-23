@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'evandro',
-	password:'888941',
+	user: 'root',
+	password:'0t0rr1n0l4r1ng0l0g1st4',
 	database:'pokemon'
 });
 
@@ -95,7 +95,7 @@ app.get('/pesquisa', function(req, res){
 
 
 app.post('/pesquisa', function(req, res){
-	
+	console.log(req)
 	P.getPokemonByName(req.body["pokémon"]).then(function(response) {
 		res.render('pokemon_informations', {page_title: "Lista de Informações sobre o Pokémon", data: response});
 	});

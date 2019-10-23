@@ -2,6 +2,62 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		body{
+			background-color: #FFCE2E;
+			background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png");
+			background-repeat: repeat;}
+		h1 {color:black;}
+		p {color:black;}
+		table{
+			border-collapse: collapse;
+			box-shadow: 2px 2px 4px #000000;
+			
+			padding: auto; 
+		}
+
+		th{	
+			padding: auto;
+			margin: auto;
+			color:white;
+  			background-color: #313131;
+		}
+		td{
+			padding: 10px;
+			margin: auto;
+			text-align: center;
+			border-top:solid white 1px;
+		}
+		
+		tr:nth-child(even) {background-color: #f2f2f2;}
+		tr:nth-child(odd) {background-color: white;}
+		
+		
+		img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		}
+		td.img{
+			border:solid white 1px;
+		}
+		fieldset{
+			background-color: #e0eeee;
+		}
+		.container {
+		  display: block;
+		  position: relative;
+		  padding-left: 35px;
+		  margin-bottom: 12px;
+		  cursor: pointer;
+		  font-size: 22px;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+	
+	</style>
 </head>
 <body>
 
@@ -10,14 +66,45 @@
 			<th>Id</th>
 			<th>Nome</th>
 			<th>Aparência</th>
+			<th>tipos</th>
 		</tr>
 		<tr>
-			<td><%= data["game_indices"][0]["game_index"] %></td>
+			<td><%= data["id"] %></td>
 			<td><%= data["name"]%></td>
-			<td><img src="<%= data['sprites']['front_default']%>"><td>
+			<td><img src="<%= data['sprites']['front_default']%>"></td>
+			<% if(data["types"].length == 1){%>
+				<td><%= data["types"]["0"]["type"]["name"] %></td>
+				
+			<%} else{%>
+				<% if(data["types"]["0"]["slot"] == 1){%>
+					<td ><%= data["types"]["0"]["type"]["name"] %> e <%= data["types"]["1"]["type"]["name"]%></td>
+					
+				<%} else{%>
+					<td><%= data["types"]["1"]["type"]["name"] %> e <%= data["types"]["0"]["type"]["name"]%></td>
+					
+				<% } %>
+
+			<% } %>
 
 		</tr>
 
 	</table>
+
+	<table>
+		<tr>
+			<th>atributos</th>
+			<th>valor</th>
+		</tr>
+		
+			<% for(var i = 0; i < 6; i++){%>
+		<tr>
+		<td><%= data["stats"][i]["stat"]["name"]%></td>
+		<td><%= data["stats"][i]["base_stat"]%></td>
+		</tr>
+		<% } %>
+		
+
+	</table>
+
 </body>
 </html>

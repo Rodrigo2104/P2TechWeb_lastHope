@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title></title>
+	
 	<style>
+		
 		<% 
 			var cores ={
 			'normal':'#A9A879',
@@ -176,19 +178,23 @@ for (var i = 0 ; i < list.length ; i++){%>
 <% if(data[i].tipo2=='NULL'){%>
 <td style="background-color: <%=cores[data[i].tipo1]%>">
 <div class="gallery">
-<a target="_self" href="<%= data[i]['sprite_front_default']%>">
-<img src="<%= data[i]['sprite_front_default']%>">
-</a>
-<div class="desc">Add a description of the image here</div>
+
+<form action="/pesquisa" method="post">
+	<button name="pokémon" value="<%= data[i]["nome"]%>">
+		<img src="<%= data[i]['sprite_front_default']%>">
+	</button>
+</form>
+
 </div>
 </td>
 <%} else{%>
 <td style="background-image: linear-gradient(to top right,<%=cores[data[i].tipo1]%>, <%=cores[data[i].tipo2]%>);">
 <div class="gallery">
-<a target="_self" href="<%= data[i]['sprite_front_default']%>">
-<img src="<%= data[i]['sprite_front_default']%>">
-</a>
-<div class="desc">Add a description of the image here</div>
+<form action="/pesquisa" method="post">
+	<button name="pokémon" value="<%= data[i]["nome"]%>">
+		<img src="<%= data[i]['sprite_front_default']%>">
+	</button>
+</form>
 </div>
 </td>
 <% } %>
