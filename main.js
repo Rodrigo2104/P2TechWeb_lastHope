@@ -72,7 +72,7 @@ app.post('/login', function(req, res){
 				if (error) return console.log(error);
 				if (results.length > 0){
 					console.log(req.body.login + " logado!");
-					res.redirect('/');
+					res.redirect('/home');
 				} else {
 					console.log("login ou senha incorreto!");
 					res.redirect('/register');
@@ -96,8 +96,16 @@ app.get('/pesquisa', function(req, res){
 
 app.post('/pesquisa', function(req, res){
 	console.log(req)
+
 	P.getPokemonByName(req.body["pokémon"]).then(function(response) {
-		res.render('pokemon_informations', {page_title: "Lista de Informações sobre o Pokémon", data: response});
+		P.getPokemonSpeciesByName(response["species"]["name"]).then(function(resp) {
+			P.getEvolutionChainById(resp["evolution_chain"]["url"].slice(42,-1)).then(function(re) {
+
+				res.render('pokemon_informations', {page_title: "Lista de Informações sobre o Pokémon", data: {pokemon:response, corrente:re}});
+				
+			});
+			
+		});
 	});
 });
 

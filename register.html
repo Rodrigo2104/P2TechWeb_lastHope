@@ -2,21 +2,43 @@
 <html>
 <head>
 	<title>Formulário</title>
+	<style>
+	body{
+			background-color: #FFCE2E;
+			background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png");
+			background-repeat: repeat;}
+		h1 {border-radius: 25px;
+			color:black;
+			background-color: white;
+			padding:auto;
+			margin:auto;
+		}
+		p {color:black;}
+		div{
+			background-color: white;
+			box-shadow: 2px 2px 4px #000000;
+			border-radius: 25px;
+			padding: auto; }
+
+
+	</style>
 </head>
 <body>
-	<h1>CADASTRO</h1>
+<div>
+<h1>CADASTRO</h1>
 <form action="/cadastro" method="post">
-<p>Name:<input type="text" name="name"></p>
-<p>Login:<input type="text" name="login"></p>
-<p>Password:<input type="password" name="password"></p>
-<p>Confirm Password:<input type="password" name="confirmpassword"></p>
+<h1>Name:<input type="text" name="name"></h1>
+<h1>Login:<input type="text" name="login"></h1>
+<h1>Password:<input type="password" name="password"></h1>
+<h1>Confirm Password:<input type="password" name="confirmpassword"></h1>
 <input type="submit" name="">
 </form>
 <h1>LOGIN</h1>
 <form action="/login" method="post">
-<p>Login:<input type="text" name="login"></p>
-<p>Password:<input type="password" name="password"></p>
+<h1>Login:<input type="text" name="login"></h1>
+<h1>Password:<input type="password" name="password"></h1>
 <input type="submit" name="">
+</div>
 
 </form>
 </body>
