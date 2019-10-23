@@ -21,4 +21,17 @@ CREATE TABLE users(
   );
   
   
+  
+  Lista de funcionalidades:
+  1. Conferir uma tabela completa com todos os pokemons;
+  2. Conferir na mesma tabelas suas sprites oficiais;
+  3. Conferir a "tipagem" de cada pokemon da tabela por meio de cores;
+  4. Filtrar entre todos os pokemons aqueles de um determinado tipo;
+  5. Ter acesso a todos os "status" do pokemon ao clicar em sua imagem;
+  6. Pesquisar um determinado pokemon pelo seu nome;
+  7. Pesqusar um determinado pokemon pelo seu id (oficial da pokemon company);
+  8. Ter acesso a toda linha evolutiva de um determinado pokemon;
+  9. Acessar ao dados de uma evolução pokemon a partir de sua pré-evolução;
+  10. 
+  
 
