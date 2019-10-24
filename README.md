@@ -28,11 +28,11 @@ Para utilizar seguir os passos abaixo:
   13. Botão de acesso a home a partir das páginas especificas de um pokemon ou de pesquisa;
   14. 
   
-  
-  Lista de requisições:
-  1.getPokemonByName -> Retorna um json com as Status do pokemon;
-  2.getPokemonSpeciesByName -> Retorna um json com informações(habitat,geração, etc) do pokemon;
-  3.getEvolutionChainById -> Retorna um json com todos os pokemons que fazem parte da mesma linha evolutiva;
-  
+
+Lista de requisições:
+1.getPokemonByName -> Retorna um json com as Status do pokemon;
+2.getPokemonSpeciesByName -> Retorna um json com informações(habitat,geração, etc) do pokemon;
+3.getEvolutionChainById -> Retorna um json com todos os pokemons que fazem parte da mesma linha evolutiva;
+
   
 
