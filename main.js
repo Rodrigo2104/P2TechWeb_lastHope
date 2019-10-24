@@ -13,11 +13,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'root',
-	password:'0t0rr1n0l4r1ng0l0g1st4',
+	user: 'evandro',
+	password:'888941',
 	database:'pokemon'
 });
 
+var logged = false;
 
 
 
@@ -72,7 +73,8 @@ app.post('/login', function(req, res){
 				if (error) return console.log(error);
 				if (results.length > 0){
 					console.log(req.body.login + " logado!");
-					res.redirect('/home');
+					this.logged = true
+					res.redirect('/');
 				} else {
 					console.log("login ou senha incorreto!");
 					res.redirect('/register');
@@ -84,6 +86,15 @@ app.post('/login', function(req, res){
 		}
 		
 		
+});
+
+app.post('/deslogin',function(req,res){
+	console.log("antes ");
+	console.log(this.logged);
+	this.logged = false;
+	console.log("depois ");
+	console.log(this.logged);
+	res.redirect('/');
 });
 
 
