@@ -18,16 +18,17 @@ Para utilizar seguir os passos abaixo:
   2. Conferir na mesma tabelas suas sprites oficiais;
   3. Conferir a "tipagem" de cada pokemon da tabela por meio de cores;
   4. Filtrar entre todos os pokemons aqueles de um determinado tipo;
-  5. Ter acesso a todos os "status" do pokemon ao clicar em sua imagem;
-  6. Pesquisar um determinado pokemon pelo seu nome;
-  7. Pesqusar um determinado pokemon pelo seu id (oficial da pokemon company);
-  8. Ter acesso a toda linha evolutiva de um determinado pokemon;
-  9. Acessar ao dados de uma evolução pokemon a partir de sua pré-evolução;
-  10. Registrar um conta;
-  11. Logar em sua conta;
-  12. Deslogar de sua conta;
-  13. Botão de acesso a home a partir das páginas especificas de um pokemon ou de pesquisa;
-  14. 
+  5. Filtrar pokemons que possuem dois tipos;
+  6. Ter acesso a todos os "status" do pokemon ao clicar em sua imagem;
+  7. Pesquisar um determinado pokemon pelo seu nome;
+  8. Pesqusar um determinado pokemon pelo seu id (oficial da pokemon company);
+  9. Ter acesso a toda linha evolutiva de um determinado pokemon;
+  10. Acessar ao dados de uma evolução pokemon a partir de sua pré-evolução;
+  11. Registrar um conta;
+  12. Logar em sua conta;
+  13. Deslogar de sua conta;
+  14. Botão de acesso a home a partir das páginas especificas de um pokemon ou de pesquisa;
+  15. Resetar filtro 
   
 
 Lista de requisições:
