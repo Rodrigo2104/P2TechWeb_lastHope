@@ -43,6 +43,18 @@ app.post('/selecao', function(req, res){
 			});
 		
 });
+app.post('/selecao2', function(req, res){
+		
+		const sql = "SELECT * FROM lista_de_pokemons WHERE tipo1 IN (?) AND tipo2 IN (?)";
+
+		const values = [req.body.tipo,req.body.tipo];
+		connection.query(sql, values, function(error, results, fields){
+			if (error) return console.log(error);
+			
+			res.render('index', {page_title: "Lista de Pokemons", data: results});
+			});
+		
+});
 
 app.post('/cadastro', function(req, res){
 		
@@ -119,6 +131,10 @@ app.post('/pesquisa', function(req, res){
 		});
 	});
 });
+
+// app.post('/adiciona', function(req,res){
+
+// })
 
 app.listen(3000, function(){
 	console.log('Servidor rodando na 3000!');

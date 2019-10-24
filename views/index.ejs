@@ -171,7 +171,9 @@
 			</button>
 		</form>
 	</div>
-	<form action="/selecao" method="post">
+
+
+<form action="/selecao" method="post">
 <fieldset>
 <h1>Tipos</h1>
 <% var list = ['normal','fighting','flying','poison','ground','rock','bug','ghost','steel','fire','water','grass','electric','psychic','ice','dragon','dark','fairy']
@@ -180,9 +182,27 @@ for (var i = 0 ; i < list.length ; i++){%>
 <input type="checkbox" name="tipo" value="<%=list[i]%>" ><span class="checkmark"></span><%=list[i]%><br>
 </label>
 <% } %>
-<input type="submit" value="Pesquisar" name="search">
+<input type="submit" value="Pesquisar OR" name="search">
 </fieldset>
 </form>
+<form action="/selecao2" method="post">
+<fieldset>
+<h1>Tipos</h1>
+<% var list = ['normal','fighting','flying','poison','ground','rock','bug','ghost','steel','fire','water','grass','electric','psychic','ice','dragon','dark','fairy']
+for (var i = 0 ; i < list.length ; i++){%>
+<label class="container">
+<input type="checkbox" name="tipo" value="<%=list[i]%>" ><span class="checkmark"></span><%=list[i]%><br>
+</label>
+<% } %>
+<input type="submit" value="Pesquisar AND" name="search">
+</fieldset>
+</form>
+
+<form action="/" method="get">
+			<button name="home" value="voltar">
+				<p>resetar filtro</p>
+			</button>
+		</form>
 <table>
 <tr>
 <th>Id</th>
@@ -215,6 +235,13 @@ for (var i = 0 ; i < list.length ; i++){%>
 </form>
 </div>
 </td>
+<!-- <td>
+	<form action="/adiciona" method="post">
+		<button name="add" value="<%= %>">
+			Adicionar
+		</button>
+	</form>
+</td> -->
 <% } %>
 </tr>
 <% } %>
