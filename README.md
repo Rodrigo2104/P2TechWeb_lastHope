@@ -1,4 +1,5 @@
 # Projeto2TechWeb
+Evandro Romeiro e Rodrigo Jesus
 
 Nova Pokedex atualizada. Feita inteiramente em Node js.
 
