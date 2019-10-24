@@ -18,6 +18,18 @@ altura INT NOT NULL,
 peso INT NOT NULL,
 PRIMARY KEY(game_id)
 );
+CREATE TABLE poketeam(
+id INT NOT NULL AUTO_INCREMENT,
+user_id INT NOT NULL,
+teamname VARCHAR(32) NOT NULL,
+pokemon1 VARCHAR(32),
+pokemon2 VARCHAR(32),
+pokemon3 VARCHAR(32),
+pokemon4 VARCHAR(32),
+pokemon5 VARCHAR(32),
+pokemon6 VARCHAR(32),
+PRIMARY KEY (id)
+);
 INSERT INTO lista_de_pokemons (game_id,nome,sprite_front_default,tipo1,tipo2,altura,peso) VALUES ('1','bulbasaur','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png','grass','poison','7','69');
 INSERT INTO lista_de_pokemons (game_id,nome,sprite_front_default,tipo1,tipo2,altura,peso) VALUES ('2','ivysaur','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png','grass','poison','10','130');
 INSERT INTO lista_de_pokemons (game_id,nome,sprite_front_default,tipo1,tipo2,altura,peso) VALUES ('3','venusaur','https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png','grass','poison','20','1000');
